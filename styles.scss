@@ -6,7 +6,7 @@
 #PlaceContainer{
     background-color: rebeccapurple;
     display: grid;
-    grid-template-columns: repeat(101, 0.8fr);
+    grid-template-columns: repeat(100, 0.5fr);
     width: 40vw;
     td{
         background-color: rgb(255, 255, 255);
@@ -21,6 +21,7 @@ h1{
     background-color: rgba(255, 192, 203, 0.589);
     color: rgba(0, 0, 0, 0.562);
     animation: Blink 10s infinite;
+    display: none;
 }
 
 

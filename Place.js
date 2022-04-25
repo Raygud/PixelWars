@@ -1,4 +1,20 @@
+let x = "Red";
+let paint = "Red";
+
+
 let Users = [
+    "2dada",
+     "dsaasd",
+     "Red",
+     "adsas",
+     "Red",
+     "raygud",
+     "Red",
+     "aaasdd",
+     "Red"
+]
+
+let UsersInfo = [
     {Name:"2dada",
      Color: "Red"},
      {Name:"dsaasd",
@@ -11,7 +27,7 @@ let Users = [
      Color: "Red"},
 ]
 
-for(let i = 0; i <= 5049 ; i++){
+for(let i = 1; i <= 5000 ; i++){
 const node = document.createElement("td");
 document.getElementById("PlaceContainer").appendChild(node);
 node.setAttribute("id", "Place"+i);
@@ -28,27 +44,32 @@ client.connect();
 client.on('message', (channel, tags, message, self) => {
 	// "Alca: Hello, World!"
     console.log(tags.username + ": " + message)
-    
+
+    for(let i = 0; i < Users.length; i++){
+        if(message.includes("Color") && tags.username.toLocaleLowerCase() == Users[i].Name.toLocaleLowerCase()){
+            
+            Users[i].Color = message.substr(6,message.length+1)
+            console.log(message.substr(6,message.length+1))
+            paint = Users[i].Color 
+            
+        }
+    }
+    console.log(x)
+
     if(!Users.includes(tags.username)){
-        Users.push({Name:tags.username,
-                    Color: "Red"})
+        UsersInfo.push({Name:tags.username,
+                    Color: x})
+                    console.log(UsersInfo)
     }
     
     if(message.startsWith("P".toLocaleLowerCase()) || message.startsWith("P"))
     {
+
         console.log("P"+message.substr(0,0))
-
-
-
-        document.getElementById("Place"+message.substr(1,message.length)).style.backgroundColor = "red"
+        document.getElementById("Place"+message.substr(1,message.length)).style.backgroundColor = paint
+        
     }
-
-    for(let i = 0; i < Users.length; i++){
-        if(tags.username.toLocaleLowerCase() == Users[i].Name.toLocaleLowerCase()){
-            console.log(Users[i])
-            Users[i].Color = "Green"
-        }
-    }
+ 
     console.log(Users)
 });
 					

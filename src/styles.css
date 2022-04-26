@@ -5,10 +5,8 @@
 
 #PlaceContainer {
   background-color: rebeccapurple;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (0.5fr)[100];
-      grid-template-columns: repeat(100, 0.5fr);
+  grid-template-columns: repeat(101, 0.8fr);
   width: 40vw;
 }
 
@@ -23,20 +21,7 @@ h1 {
   position: absolute;
   background-color: rgba(255, 192, 203, 0.589);
   color: rgba(0, 0, 0, 0.562);
-  -webkit-animation: Blink 10s infinite;
-          animation: Blink 10s infinite;
-  display: none;
-}
-
-@-webkit-keyframes Blink {
-  from {
-    background-color: rgba(255, 192, 203, 0);
-    color: rgba(0, 0, 0, 0);
-  }
-  to {
-    background-color: pink;
-    color: black;
-  }
+  animation: Blink 10s infinite;
 }
 
 @keyframes Blink {
@@ -49,4 +34,3 @@ h1 {
     color: black;
   }
 }
-/*# sourceMappingURL=styles.css.map */

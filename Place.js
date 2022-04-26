@@ -18,7 +18,7 @@ let Users = [
 
 
 
-for(let i = 0; i <= 5049 ; i++){
+for(let i = 1; i <= 5000 ; i++){
 const node = document.createElement("td");
 document.getElementById("PlaceContainer").appendChild(node);
 node.setAttribute("id", "Place"+i);

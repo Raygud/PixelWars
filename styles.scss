@@ -6,11 +6,11 @@
 #PlaceContainer{
     background-color: rebeccapurple;
     display: grid;
-    grid-template-columns: repeat(101, 0.8fr);
+    grid-template-columns: repeat(100, 0.8fr);
     width: 40vw;
     td{
         background-color: rgb(255, 255, 255);
-        border: 1px solid black;
+        border: 0.1px solid black;
         width: 12.26px;
         height: 12.26px;
     }
